@@ -3,7 +3,7 @@ int main()
 {
 	int n;
 	printf("Enter value of n: ");
-	scanf("%d ",&n);
+	scanf("%d",&n);
 	printf("\n\nMultiplication table of %d is: \n",n);
 	for (int i=1;i<=10;i++)
 		printf("%d * %d = %d \n",n,i,(n*i));
