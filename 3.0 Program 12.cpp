@@ -3,7 +3,7 @@ int main()
 {
 	int n,i,sum=0;
 	printf("Enter value of n: ");
-	scanf("%d ",&n);
+	scanf("%d",&n);
 	
 	while (n>0)
 	{
