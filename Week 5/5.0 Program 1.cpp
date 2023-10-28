@@ -2,6 +2,7 @@
 int main()
 {
 	int n;
+	float sum=0.0,avg;
 	printf("Enter size of array: ");
 	scanf("%d",&n);
 	int a[n];
@@ -19,10 +20,13 @@ int main()
 			max=a[i];
 		if (min>a[i])
 			min=a[i];
-    }
-    
-    printf("\nMaximum value: %d",max);
-    printf("\nMinimum value: %d",min);
+		sum+=a[i];
+    	}
+
+	avg=sum/n;
+    	printf("\nMaximum value: %d",max);
+    	printf("\nMinimum value: %d",min);
+	printf("\nAvergae value: %d",avg);
  
 	return 0;
 }
