@@ -1,29 +1,39 @@
 #include <stdio.h>
 int main()
 {
-	int n;
-	printf("Enter value of n: ");
+	int n,s,count=0,temp;
+	printf("Enter a number: ");
 	scanf("%d",&n);
-	for(int i=0;i<n;i++)
+	
+	int num=n;
+	 while(num>1)
+	 {
+	 	num=num/2;
+	 	count++;
+	 }
+	count++;
+	num=n;
+	int a[count];
+	
+	for(int i=0;i<count;i++)
 	{
-		for(int s=0;s<n-i-1;s++)
-			printf("  "); //2 spaces		
-		
-		for(int j=0;j<2*i+1;j++)
-			printf("* "); //with space
-			
-		printf("\n");
+		s=num%2;
+		a[i]=s;
+		num=num/2;
 	}
 	
-	for(int i=0;i<n-1;i++)
+	for(int i=0;i<count/2;i++)
 	{
-		for(int s=0;s<i+1;s++)
-			printf("  "); //2 spaces
-		
-		for(int j=0;j<2*n-2*i-3;j++)
-			printf("* "); //with space
-		
-		printf("\n");
+		temp=a[count-i-1];
+		a[count-i-1]=a[i];
+		a[i]=temp;
 	}
+	
+	printf("\nBinary equivalent: ");
+	for(int i=0;i<count;i++)
+		printf("%d",a[i]);
+
 	return 0;
 }
+
+
