@@ -2,10 +2,10 @@
 int main()
 {
 	int n,sum=0;
-	printf("Enter size of array: ");
+	printf("Enter size of matrix: ");
 	scanf("%d",&n);
 	int a[n][n];
-	printf("Enter elements of array: \n");
+	printf("Enter elements of matrix: \n");
 	for(int i=0;i<n;i++)
 		for(int j=0;j<n;j++)
 			scanf("%d",&a[i][j]);
