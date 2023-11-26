@@ -1,3 +1,5 @@
+//NOT
+
 #include <stdio.h>
 int main()
 {
@@ -14,18 +16,25 @@ int main()
 	char s2[m];
 	scanf("%s",s2);
 	
-	char s3[n+m];
+	int c=n+m;
+	char s3[c];
 	int k=0;
 	for(int i=0;i<n+m;i++)
 	{
 		if (i<n)
+		{
+			printf("Hello");
 			s3[i]=s1[i];
+		}
+			
 		else
 		{
+			printf("Guys");
 			s3[i]=s2[k];
 			k++;
 		}
 	}
+	
 	printf("%s",s3);
 	return 0;
 }

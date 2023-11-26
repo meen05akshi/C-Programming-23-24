@@ -1,3 +1,5 @@
+//WORKS
+
 #include <stdio.h>
 int main()
 {
@@ -6,16 +8,16 @@ int main()
 	scanf("%d",&n);
 	n++;
 	char s[n];
-	for(int i=0;i<n;i++)
-		scanf("%c",&s[i]);
+	printf("Enter string: ");
+	scanf("%s",s);
 	
 	char s1[n];
-	for(int i=0;i<n;i++)
-		s1[i]=s[i];
 	
 	printf("\nCopied string is: ");
 	for(int i=0;i<n;i++)
-		printf("%c",s1[i]);
+		s1[i]=s[i];
+	
+	printf("%s",s1);
 	return 0;
 
 }

@@ -1,19 +1,29 @@
+//WORKS
+
 #include <stdio.h>
 #include <string.h>
 int main()
 {
-	char s[20];
-	char s1[20];
-	printf("Enter string 1: ");
-	scanf("%s",s);
+	char s[]="Hello";
+	char s2[]="Helo";
+	char c='y';
 	
-	printf("Enter string 2: ");
-	scanf("%s",s1);
+	if (strlen(s)!=strlen(s2))
+		printf("Strings are UNEQUAL");
 	
-	if (strcmp(s,s1))
-		printf("NOT equal");
 	else
-		printf("EQUAL");
-	
-	return 0;
+	{
+		for(int i=0;i<6;i++)
+		{
+			if(s[i]!=s2[i])
+			{
+				printf("Strings are UNEQUAL.");
+				c='n';
+				break;
+			}
+		}
+		if (c=='y')
+			printf("Strings are EQUAL");
+	}
+	return 0;		
 }

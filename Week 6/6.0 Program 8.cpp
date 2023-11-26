@@ -1,31 +1,30 @@
+//NOT 
+
 #include <stdio.h>
 #include <string.h>
 int main()
 {
-	char s[20];
-	int i=0;
-	printf("Enter a string: ");
+	int n;
+	printf("Enter length of string: ");
+	scanf("%d",&n);
+	n++;
+	char s[n];
+	
+	printf("Enter string: ");
 	scanf("%s",s);
 	
-	int n=strlen(s);
-	char str[n+1];
-
-	while(i<n)
+	char rev[n];
+	
+	for(int i=0;i<n;i++)
 	{
-		str[i]=s[n-i-1];
-		i++;
+		rev[i]=s[n-i-1];
 	}
-	str[i]='\0';
-	printf("%s",str);
-	printf("\n%s",s);
-	
-	int num=strncmp(str,s,n);
-	
-	if (!num)
-		printf("\nString is PALINDROME");
+	printf("1. %s",rev);
+	printf("2. %s",s);
+	if(strcmp(s,rev)==0)
+		printf("\nPALINDROME");
 	else
 		printf("\nNOT PALINDROME");
 		
 	return 0;
-	
 }
