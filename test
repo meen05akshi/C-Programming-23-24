@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+	int a,b,c,n;
+	printf("Enter first three terms of the series: ");
+	scanf("%d %d %d",&a,&b,&c);
+	
+	printf("Enter value of n: ");
+	if (n>3)
+	{
+		rec
+	}
+	
+	
+}
+
+int rec()
+{
+	
+}
