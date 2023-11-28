@@ -1,8 +1,8 @@
 #include <stdio.h>
-float avg(int x);
+float avg(int *);
+int n;
 int main()
 {
-	int n;
 	printf("Enter size of array:");
 	scanf("%d",&n);
 	int a[n];
@@ -12,17 +12,18 @@ int main()
 		scanf("%d",&a[i]);	
 		
 	}
+	float c=avg(&a[0]);
 	
 	printf("Average of array elements is: %f",c);
 	return 0;
 }
 
-float avg(int x)
+float avg(int *x)
 {
 	float sum=0;
 	for(int i=0;i<n;i++)
 	{
-		sum+=b[i];
+		sum+=*(x+i);
 	}
 	
 	float average=sum/n;
